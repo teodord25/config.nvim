@@ -1,1 +1,5 @@
+require("custom.configs.remap")
 require("custom.configs.harpoon")
+require("custom.configs.nvimtree")
+require("custom.configs.vimtex")
+require("custom.configs.undotree")
