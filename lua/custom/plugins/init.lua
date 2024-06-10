@@ -1,6 +1,22 @@
 -- TODO: add lazy event trigger stuff
 --
 
+require'lspconfig'.gleam.setup{}
+
+require('lspconfig').rust_analyzer.setup {
+  settings = {
+    procMacro = {
+      ignored = {
+        leptos_macro = {
+          -- optional: --
+          -- "component",
+          "server",
+        },
+      },
+    },
+  }
+}
+
 return {
 
   { 'mbbill/undotree' },
@@ -23,12 +39,13 @@ return {
     config = true,
   },
 
-  {
-    'mrcjkb/rustaceanvim',
-    version = '^4', -- Recommended
-    ft = { 'rust' },
-  },
-
+  -- using rust_analyzer in mason instead
+  -- {
+  --   'mrcjkb/rustaceanvim',
+  --   version = '^4', -- Recommended
+  --   ft = { 'rust' },
+  -- },
+  --
   {
     'nvim-tree/nvim-tree.lua',
     config = true,
