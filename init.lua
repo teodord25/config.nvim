@@ -565,6 +565,8 @@ require('lazy').setup({
             },
           },
         },
+
+        biome = require('custom.configs.biome'),
       }
 
       -- Ensure the servers and tools above are installed
